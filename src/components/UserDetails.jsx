@@ -12,6 +12,7 @@ const UserDetails = () => {
 
   useEffect(() => {
     const fetchUser = async () => {
+      console.log(params);
       const res = await fetch(`http://localhost:8000/users/${params.id}`);
       const data = await res.json();
 
