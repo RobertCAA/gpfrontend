@@ -5,9 +5,11 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Users from "./components/Users";
 import UserDetails from "./components/UserDetails";
+import SearchBar from "./components/SearchBar";
 
 function App() {
   const [users, setUsers] = useState([]);
+  const [searchResults, setSearchResults] = useState([]);
   const [text, setText] = useState([]);
 
   // Loads users from server. It mounts one time.
@@ -15,6 +17,7 @@ function App() {
     const getUsers = async () => {
       const usersFromServer = await fetchUsers();
       setUsers(usersFromServer);
+      setSearchResults(usersFromServer);
     };
     getUsers();
   }, []);
