@@ -10,12 +10,12 @@ const UserDetails = () => {
   const params = useParams();
   const navigate = useNavigate();
 
+  // Chang to promises and .then
   useEffect(() => {
     const fetchUser = async () => {
-      console.log(params);
       const res = await fetch(`http://localhost:8000/users/${params.id}`);
       const data = await res.json();
-
+      // const data = getUser(params.id);
       if (res.status === 404) {
         navigate("/");
       }
@@ -24,7 +24,7 @@ const UserDetails = () => {
       setLoading(false);
     };
     fetchUser();
-  });
+  }, []);
   return loading ? (
     <h3>Loading...</h3>
   ) : (

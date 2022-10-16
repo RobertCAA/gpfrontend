@@ -7,17 +7,22 @@ import axios from "axios";
 // const params = new url.URLSearchParams(queryParams);
 
 export const api = axios.create({
-  baseURL: "http://localhost:8000/",
+  baseURL: "http://localhost:8000/users",
 });
 
 export const getUsers = async () => {
-  const response = await api.get("/users");
+  const response = await api.get("/");
   return response.data;
 };
 
-export const getUser = async () => {
-  const response = await api.get("/users/:id");
-  //  const response = await api.get(`/users/${params._id}`);
+export const getUsersPromises = () => {
+  fetch("http://localhost:8000/users").then((res) => {
+    console.log(`Recived response:${res}`);
+  });
+};
+
+export const getUser = async (id) => {
+  const response = await api.get(`/users/${id}`);
   //  const response = await api.get("users", {
   //   params : {
   //     id: 1
