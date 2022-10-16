@@ -1,12 +1,11 @@
-import { Link } from "react-router-dom";
 import React from "react";
 
 const Footer = () => {
   const content = (
     <footer className='public__footer'>
-      <Link to='#'>
+      <p>
         Done for GeoPol by <span className='nowrap'>RobertCAA</span>
-      </Link>
+      </p>
     </footer>
   );
   return content;
