@@ -6,8 +6,10 @@ import axios from "axios";
 // };
 // const params = new url.URLSearchParams(queryParams);
 
+const URL = "https://gpback.herokuapp.com/users";
+
 export const api = axios.create({
-  baseURL: "http://localhost:8000/users",
+  baseURL: URL,
 });
 
 export const getUsers = async () => {
@@ -16,7 +18,7 @@ export const getUsers = async () => {
 };
 
 export const getUsersPromises = () => {
-  fetch("http://localhost:8000/users").then((res) => {
+  fetch(URL).then((res) => {
     console.log(`Recived response:${res}`);
   });
 };

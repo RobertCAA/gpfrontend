@@ -2,10 +2,8 @@ import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import { getUsers } from "./api/axios";
-import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Users from "./components/Users";
-import SearchBar from "./components/SearchBar";
 import UserDetails from "./components/UserDetails";
 import TopBar from "./components/TopBar";
 
