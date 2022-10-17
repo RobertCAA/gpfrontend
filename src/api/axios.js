@@ -6,14 +6,14 @@ import axios from "axios";
 // };
 // const params = new url.URLSearchParams(queryParams);
 
-const URL = "https://gpback.onrender.com";
+const URL = "https://gpback.onrender.com/users";
 
 export const api = axios.create({
   baseURL: URL,
 });
 
 export const getUsers = async () => {
-  const response = await api.get("/users");
+  const response = await api.get("/");
   return response.data;
 };
 
