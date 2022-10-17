@@ -6,7 +6,7 @@ import axios from "axios";
 // };
 // const params = new url.URLSearchParams(queryParams);
 
-const URL = "https://gpback.herokuapp.com/users";
+const URL = "https://gpback.onrender.com/users";
 
 export const api = axios.create({
   baseURL: URL,
