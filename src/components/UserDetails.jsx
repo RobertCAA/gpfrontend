@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { Paper } from "@mui/material";
 
 import Button from "./Button";
 
@@ -28,16 +29,33 @@ const UserDetails = () => {
   return loading ? (
     <h3>Loading...</h3>
   ) : (
-    <div>
-      <h3>{user.username}</h3>
+    <Paper
+      elevation={3}
+      outlined
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        marginTop: "2rem",
+      }}
+    >
+      <h3>
+        {user.first_name} {user.last_name}
+      </h3>
+      <p>{user.gender}</p>
+      <p>{user.telephone}</p>
+      <p>{user.email}</p>
+      <p>{user.phone}</p>
+      <p>{user.iban}</p>
       <p>{user.username}</p>
+      <p>{user.active ? "Active" : "Inactive"}</p>
       <Button
         text='Go Back'
         onClick={() => {
           navigate(-1);
         }}
       />
-    </div>
+    </Paper>
   );
 };
 

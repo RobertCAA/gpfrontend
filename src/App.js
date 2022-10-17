@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Users from "./components/Users";
 import SearchBar from "./components/SearchBar";
 import UserDetails from "./components/UserDetails";
+import TopBar from "./components/TopBar";
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -55,8 +56,7 @@ function App() {
           path='/'
           element={
             <>
-              <Header />
-              <SearchBar users={users} setSearchResults={setSearchResults} />
+              <TopBar users={users} setSearchResults={setSearchResults} />
               <Users searchResults={searchResults} />
               <Footer />
             </>
