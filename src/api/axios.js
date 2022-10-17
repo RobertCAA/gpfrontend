@@ -13,7 +13,7 @@ export const api = axios.create({
 });
 
 export const getUsers = async () => {
-  const response = await api.get("/");
+  const response = await api.get("/users");
   return response.data;
 };
 
