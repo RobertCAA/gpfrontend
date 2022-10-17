@@ -6,7 +6,7 @@ import axios from "axios";
 // };
 // const params = new url.URLSearchParams(queryParams);
 
-const URL = "https://localhost:8000/users";
+const URL = "http://localhost:8000/users";
 
 export const api = axios.create({
   baseURL: URL,
