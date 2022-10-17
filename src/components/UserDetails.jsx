@@ -14,7 +14,9 @@ const UserDetails = () => {
   // Chang to promises and .then
   useEffect(() => {
     const fetchUser = async () => {
-      const res = await fetch(`http://localhost:8000/users/${params.id}`);
+      const res = await fetch(
+        `//https://gpback.onrender.com/users/${params.id}`,
+      );
       const data = await res.json();
       // const data = getUser(params.id);
       if (res.status === 404) {
